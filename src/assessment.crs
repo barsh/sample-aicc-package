@@ -1,0 +1,14 @@
+[Course]
+Course_Creator=Profiscience Partners
+Course_ID=1
+Course_System=HTML
+Course_Title=UniversitySite AICC Testing Tool
+Level=1
+Max_Fields_CST=2
+Total_AUs=1
+Total_Blocks=0
+Version=3.0
+[Course_Behavior]
+Max_Normal=1
+[Course_Description]
+Descriptive Text

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript" src="Api.js"></script>
+<script type="text/javascript">
+    $(window).ready(function () {
+        API.setIncomplete();
+        $("#lblLessonLocation").html(API.getLessonLocation());
+    });
+</script>
+<style>
+    #apiLog { border: 1px solid gainsboro; font-family: Arial; font-size:x-small; margin-top:20px; padding: 10px 10px 10px 10px;}
+    
+</style>
+</head>
+<body>
+Lesson Location (bookmark): <span id="lblLessonLocation"></span><br/>
+<input type="button" value="Save current time to LMS as bookmark" onclick="API.setLessonLocation(new Date().toString())"/><br />
+<input type="button" value="Set LMS to Passed" onclick="API.setPassed();$('input[type=button]').attr('disabled', 'disabled');"/><br />
+<input type="button" value="Set LMS to Failed" onclick="API.setFailed();$('input[type=button]').attr('disabled', 'disabled');"/><br />
+<input type="button" value="Set LMS to Complete" onclick="API.setCompleted();$('input[type=button]').attr('disabled', 'disabled');"/><br />
+</body>
+</html>
